@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>motivational-quotes</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>motivational-quotes Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <repositories>
+	<repository>
+		<id>nexus</id>
+		<name>Nexus proxy repo</name>
+		<url>http://18.216.164.147:8081/jkusi/repository/motivation-proxy/</url>
+	</repository>
+  </repositories>
+
+
+  <distributionManagement>
+	  <repository>
+		  <id>nexus</id>
+		  <name>Motivational Releases Nexus Repository </name>
+	 	 <url>http://18.216.164.147:8081/jkusi/repository/motivation-releases/</url> 
+	 </repository>
+
+	  <snapshotRepository>
+		  <id>nexus</id>
+		  <name>Motivational Snsapshot Nexus Repository </name>
+		  <url>http://18.216.164.147:8081/jkusi/repository/motivation-snapshot/</url>
+	  </snapshotRepository>
+
+  </distributionManagement>
+
+  <build>
+    <finalName>motivational-quotes</finalName>
+  </build>
+  <properties>
+	  <motivational.quote>
+		  Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.
+	  </motivational.quote>
+	  <sonar.host.url>http://18.191.63.197:9000</sonar.host.url>
+  	  <sonar.login>0b9c6e43c6793ce523a16d3696d5268fabae7499</sonar.login>
+	  <!-- <sonar.password>...</sonar.password> -->
+
+  </properties>
+
+</project>
